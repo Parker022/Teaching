@@ -64,11 +64,16 @@
 //Next stage is learning Lists, Arrays, Dictionaries and ForEach loops
 //Exercise is using methods, take in 8 values into a list, order them by ascending in a method and then write them 1 by 1 to the console.
 
+Dictionary<string, string> pairs = new Dictionary<string, string>() { {"key", "value" }, { "1", "other value" } };
 List<string> strings = new List<string>() { "other", "dumb", "something" };
 
-foreach (var item in strings)
+var input = Console.ReadLine();
+strings.Add(input);
+
+foreach (var item in pairs)
 {
-    Console.WriteLine("This item string is: " + item);
+    Console.WriteLine("This item key is: " + item.Key);
+    Console.WriteLine("This item value is: " + item.Value);
 }
 
 for (int i = 0; i < strings.Count; i++)
